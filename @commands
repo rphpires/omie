@@ -1,0 +1,299 @@
+## Instalação do ambiente:
+-- recomendado criar uma venv:
+python -m venv venv
+
+-- Instalação dos componentes:
+pip instal django
+
+
+## Cração do projeto
+-- Comando para criação do projeto, o . significa que será no mesmo diretório:
+> django-admin startproject app .
+
+-- Comando para executar o projeto:
+> python .\manage.py runserver
+
+-- Comadno para criar os apps do projetos (os apps são pastas que agrupam operações relacionadas a uma entidade específica.)
+> python .\manage.py startapp {app_name}
+
+### Para criar "habilitar" um app, precisamos ir no arquivo "app.settings.py" e adicionar a app nova no item: INSTALLED_APPS
+
+-- Itens necessários após criar um app:
+> Models
+> Views
+> Settings.url
+>> Se houver: Serializer
+
+#### DATABASE COMMANDS
+
+-- Comando para criar os arquivos de inicialização padrãos do banco de dados da aplicação:
+> [Windows] python .\manage.py makemigrations
+> [Ubunto] python3 manage.py makemigrations
+
+-- Comando para executar os arquivos criados pelo makemigrations:
+> [Windows] python .\manage.py migrate
+> [Ubunto] python3 manage.py migrate
+
+
+### Auth comands
+-- Comando para criar um superUser:
+> python .\manage.py createsuperuser 
+
+
+### Alterar a senha de um operador:
+-- Execute o comando abaixo
+python manage.py shell
+
+-- Em seguida execute os comandos na ordem abaixo:
+from django.contrib.auth.models import User
+admin_user = User.objects.get(username='admin')
+admin_user.set_password('admin')
+admin_user.save()
+exit()
+
+
+### Gerar arquivo de dependências do projeto
+-- Criar o arquivo requirements:
+pip freeze > requirements.txt
+
+-- Instalar as dependencias:
+pip install -r .\requirements.txt
+
+
+
+### PostgreSQL commands:
+-- Entrar no shell do PostreSQL:
+psql -U postgres
+
+-- Listar todos os bancos de dados no PSQL
+\l
+
+-- Criar um banco de dados:
+CREATE DATABASE [nome_da_tabela];
+EX: CREATE DATABASE carros;
+
+-- Sair do shell:
+\q
+
+### Servidor Ubunto AWS:
+> O recomando é realizar todas as instalações com o usuário root
+-- Comando para trocar o usuário:
+sudo su
+
+> Após iniciar o servidor Ubunto no AWS, alguns passos são necessários:
+sudo apt update
+sudo apt upgrade
+
+> Configuração do Github no servidor:
+-- Comandos para gerar chave SSH no servidor e adicionar chave no agente SSH:
+ssh-keygen -t ed25519 -C "rphspires@email.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+-- Comando para ler conteúdo da sua chave gerada:
+cat ~/.ssh/id_ed25519.pub
+
+-- No GitHub é necessario autorizar a conexão utilizando a chave recem criada.
+Copiar o conteúdo completo do arquivo ssh do comando anterior, ir no GitHub em: 
+    Settings > SSH and GPG Keys > clicar em "New SSH key"
+
+-- Comando para testar autenticação:
+ssh -T git@github.com
+
+-- Clonar o repositório para a pasta padrão do Ubunto:
+/home/ubunto
+obs: utilizar link SSH para fazer o clone.
+git clone "utl do repositório"
+
+-- Instalação do PostgreSQL
+sudo apt install postgresql postgresql-contrib
+
+-- Comando para acessar o Postgres Shell:
+sudo -u postgres psql
+
+-- Comando para alterar senha do usuário postgres:
+\password postgres
+
+> Preparar o Python:
+-- Comandos para instalar dependências e ferramentas do Python:
+sudo apt install build-essential python3
+sudo apt install python3-dev
+sudo apt install python3-venv
+sudo apt install python3-pip
+
+> Ativar a venv:
+source venv-cars/bin/activate
+
+
+### Alterando o servidor para rodar em Produção no Ubunto
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+-- Antes de seguir, precisamos reinstalar toda aplicação em um diretório diferente:
+-- Comando para apagar os diretórios:
+
+sudo rm -Rf DjangoMaster_Carros/
+
+* Para realizar estas configurações precisamos estar logados com o usuário: root
+
+-- Comando para trocar o usuário:
+
+sudo su
+
+-- Fazer a instalação no diretório: /var/www
+-- ir para o diretório: var
+cd /var
+
+-- Criar o diretório www se ele não existir:
+mkdir www
+
+> uWSGI (Web Server Gateway Interface) 
+Este é o Gateway que faz a interface entre do WebServer do Servidor com o Python.
+
+-- Instalção do módulo
+pip install uwsgi
+
+-- Inicializar o WSGI:
+uwsgi --http :8000 --module {project_name.wsgi} --chmod-socket=666
+
+EX: uwsgi --http :8000 --module app.wsgi --chmod-socket=666
+--module app.wsgi: Inicia o arquivo wsgi.py do nosso projeto
+--chmod-socket=666: Habilita algumas permissões necessárias, o '666' é um tipo de permissão.
+
+-- Criar o arquivo para habilitar o Socket entre o NGINX e o uWSGI:
+uwsgi --socket /var/www/{ApplicationName}/carros.sock --module app.wsgi --chmod-socket=666
+
+
+-- Criar arquivo de inicialização da aplicação:
+-- Na raiz do projeto criar o arquivo:
+{name}_uwsgi.ini
+Ex: carros_uwsgi.ini
+
+Conteúdo:
+"""
+[uwsgi]
+
+chdir           = /var/www/{Nome do projeto}
+module          = app.wsgi
+home            = /var/www/{Nome do projeto}/{Nome da Venv}
+master          = true
+processes       = 10
+socket          = /var/www/{Nome do projeto}/carros.sock
+chmod-socket    = 666
+vacuum          = true
+"""
+
+-- Novo comando para iniciar o serviço no uWSGI:
+uwsgi --ini carros_uwsgi.ini
+
+
+> NGINX (WebServer)
+NGINX é um servidor web que também funciona como proxy de email, proxy reverso, e balanceador de carga
+
+-- Comando para instalação
+sudo apt install nginx
+
+-- Configurar o arquivo de configuração do nosso projeto dentro do NGINX
+- Aqui apontamos o nginx para o uWSGI
+
+-- Ir para o diretório:
+cd /etc/nginx/sites-available/
+
+-- Criar o arquivo de configuração:
+sudo nano carros.conf
+
+Conteúdo do arquivo de configuração:
+"""
+upstream django {
+    server unix:///var/www/DjangoMaster_Carros/carros.sock;
+    # server 127.0.0.1:8001;
+}
+
+server {
+    listen      8000;
+    server_name 52.67.123.82;
+    charset     utf-8;
+
+    client_max_body_size 75M;
+
+    location /media  {
+        alias /var/www/DjangoMaster_Carros/media;
+    }
+
+    location /static {
+        alias /var/www/DjangoMaster_Carros/static;
+    }
+
+    location / {
+        uwsgi_pass  django;
+        include     /var/www/DjangoMaster_Carros/uwsgi_params;
+    }
+}
+"""
+
+OBS: Caso alguma configuração seja alterada no arquivo, reiniciar o serviço:
+sudo /etc/init.d/nginx restart
+
+-- Criar o arquivo de configuração do uwsgi
+- Criar o arquivo uwsgi_params na raiz do projeto com o seguiten conteúdo:
+"""
+uwsgi_param  QUERY_STRING       $query_string;
+uwsgi_param  REQUEST_METHOD     $request_method;
+uwsgi_param  CONTENT_TYPE       $content_type;
+uwsgi_param  CONTENT_LENGTH     $content_length;
+uwsgi_param  REQUEST_URI        $request_uri;
+uwsgi_param  PATH_INFO          $document_uri;
+uwsgi_param  DOCUMENT_ROOT      $document_root;
+uwsgi_param  SERVER_PROTOCOL    $server_protocol;
+uwsgi_param  REQUEST_SCHEME     $scheme;
+uwsgi_param  HTTPS              $https if_not_empty;
+uwsgi_param  REMOTE_ADDR        $remote_addr;
+uwsgi_param  REMOTE_PORT        $remote_port;
+uwsgi_param  SERVER_PORT        $server_port;
+uwsgi_param  SERVER_NAME        $server_name;
+"""
+
+-- Configurar o 'static/' no arquivo settings.py do projeto:
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/' )
+
+-- Comando para habilitar o arquivo e configuração no NGINX:
+sudo ln -s /etc/nginx/sites-available/carros.conf /etc/nginx/sites-enabled/
+
+-- Comando para coletar os arquivos estaticos no Django:
+python manage.py collectstatic
+
+-- Comando para reiniciar o Nginx:
+sudo /etc/init.d/nginx restart
+
+
+>> Configurar os componentes como serviço no AWS.
+A pasta "systemd" é onde o linux entende que estão os serviços que precisam ser executados na inicialização.
+
+-- Criar o arquivo de serviço na pasta systemd:
+sudo nano /etc/systemd/system/carros.service
+
+Conteúdo:
+"""
+[Unit]
+Description=uWSGI instance to serve carros
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/var/www/carros
+ExecStart=/var/www/carros/venv/bin/uwsgi --ini /var/www/carros/carros_uwsgi.ini
+
+[Install]
+WantedBy=multi-user.target
+"""
+
+-- Reload no Linux para carregar as configurações aplicadas:
+sudo systemctl daemon-reload
+sudo systemctl start carros
+sudo systemctl enable carros # Esse comando só é necessário a primeira vez.
+
+
+>> Configuração para ajustar o IP do servidor do Nginx
