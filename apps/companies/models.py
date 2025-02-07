@@ -15,3 +15,6 @@ class Company(models.Model):
         db_table = 'companies'
         verbose_name = 'Empresa'
         verbose_name_plural = 'Empresas'
+
+    def __str__(self):
+        return f"{self.name}"

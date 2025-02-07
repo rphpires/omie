@@ -7,3 +7,6 @@ class ServiceOrderConfig(AppConfig):
 
     verbose_name = 'Ordem de serviço'
     verbose_name_plural = 'Ordens de serviço'
+
+    def ready(self):
+        import apps.service_order.signals  # Registra os signals

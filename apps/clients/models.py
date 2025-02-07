@@ -14,3 +14,6 @@ class Client(models.Model):
         db_table = 'clients'
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
+    
+    def __str__(self):
+        return f"{self.razao_social or self.nome_fantasia}"

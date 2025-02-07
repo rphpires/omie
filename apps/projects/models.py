@@ -1,5 +1,7 @@
 from django.db import models
 
+from apps.service_order.models import ServiceOrder
+
 
 OPCOES = [
     ('N', 'Não'),
@@ -20,6 +22,11 @@ class Project(models.Model):
 
     company = models.ForeignKey("companies.Company", on_delete=models.PROTECT, related_name='projects', null=True, blank=True)
 
+    valor_total_pedidos = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, blank=True, null=True)
+    valor_pedidos_pendente = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, blank=True, null=True)
+    valor_total_servicos = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, blank=True, null=True)
+    valor_servicos_pendente = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, blank=True, null=True)
+
     class Meta:
         db_table = 'projects'
         ordering = ['project_id', 'name']
@@ -27,4 +34,4 @@ class Project(models.Model):
         verbose_name_plural = 'Projetos'
 
     def __str__(self):
-        return f"<Project> {self.project_id}_{self.name}"
+        return f"{self.name}"

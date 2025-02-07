@@ -4,6 +4,7 @@ from .functions import *
 from ..models import ServiceOrder, ServiceStages
 from apps.companies.models import Company
 from apps.projects.models import Project
+from apps.clients.models import Client
 
 from libs.global_functions import *
 from libs.omie_api import OmieConnection
@@ -33,20 +34,34 @@ def servicos_import():
                     try:
                         cabecalho = os["Cabecalho"]
                         info_cadastro = os["InfoCadastro"]
+                        servicos_prestados = os["ServicosPrestados"]
+                        trace(f"Criando lista de serviços prestados: total={len(servicos_prestados)}")
+
                         stage = ServiceStages.objects.filter(etapa=cabecalho.get("cEtapa"), company=company_instance).first()
-                            
-                        ordem_de_servico, created = ServiceOrder.objects.update_or_create(
-                            codigo_os=cabecalho.get("nCodOS"),  # ID único do Omie
-                            defaults={
-                                "numero_os": cabecalho.get("cNumOS"),
-                                "projeto": Project.objects.filter(project_id=os["InformacoesAdicionais"].get("nCodProj")).first(),
-                                "etapa": stage,
-                                "data_previsao": convert_date(cabecalho.get("dDtPrevisao")),
-                                "cancelado": info_cadastro.get("cCancelada"),
-                            }
-                        )
-                        action = "Created" if created else "Updated"
-                        trace(f"{action} os: {ordem_de_servico.numero_os}, {ordem_de_servico.projeto}")
+                        project_instance = Project.objects.filter(project_id=os["InformacoesAdicionais"].get("nCodProj")).first()
+                        client_instance = Client.objects.filter(codigo_cliente=cabecalho.get("nCodCli")).first()
+
+                        for serv in servicos_prestados:
+                            ordem_de_servico, created = ServiceOrder.objects.update_or_create(
+                                codigo_os=cabecalho.get("nCodOS"),  # ID único do Omie
+                                defaults={
+                                    "numero_os": cabecalho.get("cNumOS"),
+                                    "projeto": project_instance,
+                                    "client_id": client_instance,
+                                    "company": company_instance, 
+                                    "etapa": stage,
+                                    "data_previsao": convert_date(cabecalho.get("dDtPrevisao")),
+                                    "cancelado": info_cadastro.get("cCancelada"),
+                                    "servico_id": serv.get("nCodServico"),
+                                    "servico_item_id": serv.get("nIdItem"),
+                                    "servico_descricao": serv.get("cDescServ"),
+                                    "servico_quantidade": serv.get("nQtde"),
+                                    "servico_valor_unitario": serv.get("nValUnit"),
+                                    "servico_valor_total": cabecalho.get("nValorTotal"),
+                                }
+                            )
+                            action = "Created" if created else "Updated"
+                            trace(f"{action} os: {ordem_de_servico.numero_os}, {ordem_de_servico.projeto}")
                     
                     except Exception as ex:
                         report_exception(ex)

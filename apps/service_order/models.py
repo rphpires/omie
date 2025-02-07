@@ -19,6 +19,9 @@ class ServiceStages(models.Model):
         verbose_name = "Etapa"
         verbose_name_plural = "Etapas"
 
+    def __str__(self):
+        return f"[{self.etapa}] {self.name}"
+
 
 class ServiceOrder(models.Model):
     codigo_os = models.IntegerField(null=True, blank=True)  # codigo_pedido
@@ -30,7 +33,7 @@ class ServiceOrder(models.Model):
     faturado = models.CharField(max_length=1, choices=OPCOES, default='N')
     pendencia = models.CharField(max_length=1, choices=OPCOES, default='N')
     
-    client_id = models.ForeignKey('clients.Client', on_delete=models.PROTECT, related_name='services', null=True, blank=True)
+    client = models.ForeignKey('clients.Client', on_delete=models.PROTECT, related_name='services', null=True, blank=True)
     projeto = models.ForeignKey('projects.Project', on_delete=models.PROTECT, related_name='services', null=True, blank=True)
     company =  models.ForeignKey("companies.Company", on_delete=models.PROTECT, related_name='services', null=True, blank=True)
 
@@ -57,4 +60,4 @@ class ServiceOrder(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return f"{self.numero_os}, {self.name}"
