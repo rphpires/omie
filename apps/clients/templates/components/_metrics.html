@@ -1,0 +1,181 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col">
+      <div class="counter">
+        <i class="fa fa-minus-square-o fa-2x"></i>
+        <h2 class="timer count-title count-number" 
+          id="counter_integer" 
+          data-to="{{ metrics.count_pend }}" 
+          data-speed="1000"
+          data-format="integer">
+        </h2>
+        <p class="count-text" style="font-size: 18px;">Itens Pendentes</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="counter">
+        <i class="fa fa-inbox fa-2x"></i>
+        <h2 class="timer count-title count-number" 
+          id="counter_money" 
+          data-to="{{ metrics.valor_pedidos_pendente }}" 
+          data-speed="1500"
+          data-format="currency">
+        </h2>
+        <p class="count-text" style="font-size: 18px;">Total Pedidos Pendentes</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="counter">
+        <i class="fa fa-cogs fa-2x"></i>
+        <h4 class="timer count-title count-number" 
+          id="counter_money" 
+          data-to="{{ metrics.valor_servicos_pendente }}" 
+          data-speed="1500"
+          data-format="currency">
+        </h4>
+        <p class="count-text" style="font-size: 18px;">Total Serviços Pendentes</p>
+      </div>
+    </div>
+
+    {% with total_value=metrics.valor_pedidos_pendente|add:metrics.valor_servicos_pendente %}
+    <div class="col">
+      <div class="counter">
+        <i class="fa-solid fa-dollar-sign fa-2x"></i>
+        <h4 class="timer count-title count-number" 
+          id="counter_money" 
+          data-to="{{ total_value }}" 
+          data-speed="1500"
+          data-format="currency">
+        </h4>
+        <p class="count-text" style="font-size: 18px;">Total Carteira em Aberto</p>
+      </div>
+    </div>
+    {% endwith %}
+  </div>
+</div>
+
+
+<script>
+  (function ($) {
+    $.fn.countTo = function (options) {
+      options = options || {};
+
+      return $(this).each(function () {
+        var settings = $.extend({}, $.fn.countTo.defaults, {
+          from:            $(this).data('from') || 0,
+          to:              parseFloat($(this).data('to')) || 0,
+          speed:           $(this).data('speed') || 1000,
+          refreshInterval: $(this).data('refresh-interval') || 100,
+          decimals:        $(this).data('decimals') || 0,
+          format:          $(this).data('format') || "integer" 
+        }, options);
+        
+        var loops = Math.ceil(settings.speed / settings.refreshInterval),
+            increment = (settings.to - settings.from) / loops;
+
+        var self = this,
+            $self = $(this),
+            loopCount = 0,
+            value = settings.from,
+            data = $self.data('countTo') || {};
+        
+        $self.data('countTo', data);
+        
+        if (data.interval) {
+          clearInterval(data.interval);
+        }
+
+        data.interval = setInterval(updateTimer, settings.refreshInterval);
+        render(value);
+        
+        function updateTimer() {
+          value += increment;
+          loopCount++;
+
+          render(value);
+
+          if (loopCount >= loops) {
+            clearInterval(data.interval);
+            value = settings.to;
+            render(value); // Exibe o valor final formatado corretamente
+          }
+        }
+
+        function render(value) {
+          var formattedValue = formatValue(value, settings);
+          $self.text(formattedValue);
+        }
+      });
+    };
+
+    $.fn.countTo.defaults = {
+      from: 0,
+      to: 0,
+      speed: 1000,
+      refreshInterval: 100,
+      decimals: 2,
+      format: "integer",
+      formatter: null
+    };
+
+    function formatValue(value, settings) {
+      if (settings.format === "currency") {
+        return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+      } else {
+        return value.toLocaleString("pt-BR", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+      }
+    }
+
+  }(jQuery));
+
+  jQuery(function ($) {
+    $('.count-number').each(function () {
+      var format = $(this).data('format') || "integer";
+      $(this).data('countToOptions', {
+        format: format
+      });
+    });
+
+    $('.timer').each(count);
+
+    function count(options) {
+      var $this = $(this);
+      options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+      $this.countTo(options);
+    }
+  });
+</script>
+
+
+
+<style>
+  .counter {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    border-radius: 5px;
+  }
+
+  .count-title {
+    font-size: 35px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .count-text {
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    /* color: #e70000; */
+    color: #505050;
+  }
+</style>

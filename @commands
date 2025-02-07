@@ -14,7 +14,8 @@ pip instal django
 > python .\manage.py runserver
 
 -- Comadno para criar os apps do projetos (os apps são pastas que agrupam operações relacionadas a uma entidade específica.)
-> python .\manage.py startapp {app_name}
+> [Windows] python .\manage.py startapp {app_name}
+> [Ubunto] python3 manage.py startapp {app_name}
 
 ### Para criar "habilitar" um app, precisamos ir no arquivo "app.settings.py" e adicionar a app nova no item: INSTALLED_APPS
 
@@ -37,7 +38,8 @@ pip instal django
 
 ### Auth comands
 -- Comando para criar um superUser:
-> python .\manage.py createsuperuser 
+> [Windows] python .\manage.py createsuperuser 
+> [Ubunto] python3 manage.py createsuperuser 
 
 
 ### Alterar a senha de um operador:
