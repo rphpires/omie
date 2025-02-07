@@ -3301,3 +3301,374 @@ ERROR2025/02/07 21:42:31.551175 Sleeping 2 seconds
 /home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
   warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
 [07/Feb/2025 21:43:01] [m"POST /executar-tarefa HTTP/1.1" 200 63[0m
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.866199
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.877647
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:34.903422
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:34.911953
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.919238
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.926379
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.934150
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.940957
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.948763
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.956080
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.964609
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:34.971913
+DB error executing 'update_job' (database is locked). Retrying with a new DB connection...
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.136456
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.142644
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.150391
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.156533
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.163677
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.174436
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.182335
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.191363
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.198849
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.207617
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.215308
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.222323
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.231142
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.238837
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.254439
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.261749
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.269086
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.277096
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.283538
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.294798
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.302698
+DB error executing 'update_job' (database is locked). Retrying with a new DB connection...
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.309268
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.330995
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.338418
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.346271
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.351786
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.359329
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.365105
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 22:00:00 UTC)" was missed by 0:11:35.371461
+DB error executing 'update_job' (database is locked). Retrying with a new DB connection...
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.509780
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.517622
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.523733
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.531196
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.538546
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.545698
+DB error executing 'update_job' (database is locked). Retrying with a new DB connection...
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.585876
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.592999
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.597936
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.603172
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.618633
+DB error executing 'update_job' (database is locked). Retrying with a new DB connection...
+Exception in thread APScheduler:
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/util.py", line 98, in func_wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/jobstores.py", line 258, in update_job
+    db_job.save()
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1130, in _save_table
+    updated = self._do_update(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: database is locked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/apscheduler/schedulers/blocking.py", line 30, in _main_loop
+    wait_seconds = self._process_jobs()
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/apscheduler/schedulers/base.py", line 1229, in _process_jobs
+    jobstore.update_job(job)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/util.py", line 104, in func_wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/jobstores.py", line 258, in update_job
+    db_job.save()
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1130, in _save_table
+    updated = self._do_update(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: database is locked
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.779010
+DB error executing 'atomic_update_or_create' (database is locked). Retrying with a new DB connection...
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.792646
+Error notifying listener
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/util.py", line 98, in func_wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/models.py", line 191, in atomic_update_or_create
+    job_execution.save()
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1130, in _save_table
+    updated = self._do_update(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: database is locked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/apscheduler/schedulers/base.py", line 1038, in _dispatch_event
+    cb(event)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/jobstores.py", line 146, in handle_error_event
+    job_execution = DjangoJobExecution.atomic_update_or_create(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/util.py", line 104, in func_wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django_apscheduler/models.py", line 191, in atomic_update_or_create
+    job_execution.save()
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1130, in _save_table
+    updated = self._do_update(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: database is locked
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.811280
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.819110
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.827617
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.835184
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.846503
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.853923
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.860742
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.867103
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.873102
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.983580
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.989588
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:35.996009
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.002453
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.009203
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.015811
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.022104
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.028660
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.035399
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.042784
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.050530
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.056741
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.063485
+Run time of job "tarefa_horas_cheias (trigger: cron[minute='0'], next run at: 2025-02-07 23:00:00 UTC)" was missed by 0:11:36.069233
+[07/Feb/2025 22:11:51] [m"POST /executar-tarefa HTTP/1.1" 200 63[0m
+
+
+************************************************************************
+Exception date: 2025/02/07 22:12:18.210649 
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 37, in projects_import
+    "info_created_at": format_date_time(pr["info"].get("data_inc"), pr["info"].get("hora_inc")),
+KeyError: 'info'
+ERROR2025/02/07 22:12:18.211019 Bypassing exception at Thread ('info')
+ERROR2025/02/07 22:12:18.211115 **** Exception: <code>Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 37, in projects_import
+    "info_created_at": format_date_time(pr["info"].get("data_inc"), pr["info"].get("hora_inc")),
+KeyError: 'info'
+</code>
+ERROR2025/02/07 22:12:18.211175 Sleeping 2 seconds
+
+
+************************************************************************
+Exception date: 2025/02/07 22:12:20.687931 
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 37, in projects_import
+    "info_created_at": format_date_time(pr["info"].get("data_inc"), pr["info"].get("hora_inc")),
+KeyError: 'info'
+ERROR2025/02/07 22:12:20.688145 Bypassing exception at Thread ('info')
+ERROR2025/02/07 22:12:20.688235 **** Exception: <code>Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 37, in projects_import
+    "info_created_at": format_date_time(pr["info"].get("data_inc"), pr["info"].get("hora_inc")),
+KeyError: 'info'
+</code>
+ERROR2025/02/07 22:12:20.688261 Sleeping 2 seconds
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+[07/Feb/2025 22:13:13] [m"POST /executar-tarefa HTTP/1.1" 200 63[0m
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1665: RuntimeWarning: DateTimeField Project.info_created_at received a naive datetime (1900-01-01 00:00:00) while time zone support is active.
+  warnings.warn(
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1665: RuntimeWarning: DateTimeField Project.info_updated_at received a naive datetime (1900-01-01 00:00:00) while time zone support is active.
+  warnings.warn(
+
+
+************************************************************************
+Exception date: 2025/02/07 22:13:13.591219 
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 43, in projects_import
+    trace(f"{action} client: {client.nome_fantasia or client.razao_social}")
+AttributeError: 'Project' object has no attribute 'nome_fantasia'
+ERROR2025/02/07 22:13:13.594563 Bypassing exception at Thread ('Project' object has no attribute 'nome_fantasia')
+ERROR2025/02/07 22:13:13.595888 **** Exception: <code>Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 43, in projects_import
+    trace(f"{action} client: {client.nome_fantasia or client.razao_social}")
+AttributeError: 'Project' object has no attribute 'nome_fantasia'
+</code>
+ERROR2025/02/07 22:13:13.596034 Sleeping 2 seconds
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+[07/Feb/2025 22:13:52] [m"POST /executar-tarefa HTTP/1.1" 200 63[0m
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1665: RuntimeWarning: DateTimeField Project.info_created_at received a naive datetime (1900-01-01 00:00:00) while time zone support is active.
+  warnings.warn(
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1665: RuntimeWarning: DateTimeField Project.info_updated_at received a naive datetime (1900-01-01 00:00:00) while time zone support is active.
+  warnings.warn(
+
+
+************************************************************************
+Exception date: 2025/02/07 22:13:53.407351 
+
+Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 43, in projects_import
+    trace(f"{action} client: {client.nome}")
+AttributeError: 'Project' object has no attribute 'nome'
+ERROR2025/02/07 22:13:53.407598 Bypassing exception at Thread ('Project' object has no attribute 'nome')
+ERROR2025/02/07 22:13:53.407700 **** Exception: <code>Traceback (most recent call last):
+  File "/home/raphael/omie/apps/projects/services/services.py", line 43, in projects_import
+    trace(f"{action} client: {client.nome}")
+AttributeError: 'Project' object has no attribute 'nome'
+</code>
+ERROR2025/02/07 22:13:53.407779 Sleeping 2 seconds
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+[07/Feb/2025 22:14:09] [m"POST /executar-tarefa HTTP/1.1" 200 63[0m
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1665: RuntimeWarning: DateTimeField Project.info_created_at received a naive datetime (1900-01-01 00:00:00) while time zone support is active.
+  warnings.warn(
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py:1665: RuntimeWarning: DateTimeField Project.info_updated_at received a naive datetime (1900-01-01 00:00:00) while time zone support is active.
+  warnings.warn(
+/home/raphael/omie/venv/lib/python3.10/site-packages/django/db/backends/utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)

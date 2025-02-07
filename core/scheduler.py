@@ -31,8 +31,8 @@ def log_execucao(func):
 def funcao_app1():
     trace(f"App1 executado em: {datetime.now()}")
     # clients_import()
-    servicos_import()
-    # projects_import()
+    # servicos_import()
+    projects_import()
     funcao_app2()
 
 
